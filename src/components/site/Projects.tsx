@@ -55,7 +55,8 @@ export function Projects() {
                 key={n}
                 className="relative aspect-[9/16] w-1/3 shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-primary/20 via-slate-900/60 to-black/70"
               >
-                <span className="absolute top-2 left-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] text-muted-foreground">
+                <span dir="ltr"
+                  className="absolute top-2 left-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] text-muted-foreground">
                   1080×1920
                 </span>
                 <Film className="absolute inset-0 m-auto size-7 text-primary/70" />
