@@ -31,19 +31,6 @@ type Dict = {
   footerTitle: string;
   footerDesc: string;
   rights: string;
-  about: {
-    badge: string;
-    headline: string;
-    description: string;
-    educationTitle: string;
-    educationSubtitle: string;
-    education: { date: string; title: string; institution: string; details: string }[];
-    metrics: { value: string; label: string }[];
-    certificationsTitle: string;
-    certifications: string[];
-    philosophyCommand: string;
-    philosophyQuote: string;
-  };
 };
 
 const en: Dict = {
@@ -87,42 +74,6 @@ const en: Dict = {
   footerTitle: "Ready to put your operations on autopilot?",
   footerDesc: "Let's map your workflows and ship the first automation this week.",
   rights: "uncive.ai © All rights reserved",
-  about: {
-    badge: "ABOUT ME",
-    headline: "Engineering student by day, automation architect around the clock",
-    description:
-      "I design AI systems that replace repetitive human work — support inboxes, phone lines, order lookups, invoice entry — and I ship them as reliable, monitored workflows rather than demos.",
-    educationTitle: "Education timeline",
-    educationSubtitle: "Formal training that backs the practical work.",
-    education: [
-      {
-        date: "2025 – 2029",
-        title: "BSc Computer Engineering",
-        institution: "University of Engineering & Technology (UET), Lahore",
-        details: "Focused on systems, networks, and applied AI — building automation projects alongside coursework.",
-      },
-      {
-        date: "2023 – 2025",
-        title: "Intermediate in Computer Science (ICS)",
-        institution: "Superior College",
-        details: "Graduated with Grade A+ — top of class in programming and mathematics.",
-      },
-    ],
-    metrics: [
-      { value: "10+", label: "PROJECTS BUILT" },
-      { value: "24/7", label: "AVAILABILITY" },
-      { value: "100%", label: "RELIABILITY" },
-      { value: "5+", label: "AUTOMATION STACKS" },
-    ],
-    certificationsTitle: "Key certifications",
-    certifications: [
-      "ACT AI — National AI Training Programme (Cycle 1)",
-      "Excel and Copilot Fundamentals",
-      "Workflow Automation with n8n: Logic, Data & Error Handling",
-    ],
-    philosophyCommand: "philosophy --print",
-    philosophyQuote: '“If a human does it twice a day, it should be a workflow with logging, retries, and a fallback path.”',
-  },
 };
 
 const fr: Dict = {
@@ -166,42 +117,6 @@ const fr: Dict = {
   footerTitle: "Prêt à mettre vos opérations en pilote automatique ?",
   footerDesc: "Cartographions vos workflows et livrons la première automatisation cette semaine.",
   rights: "uncive.ai © Tous droits réservés",
-  about: {
-    badge: "À PROPOS",
-    headline: "Étudiant ingénieur le jour, architecte d’automatisation à toute heure",
-    description:
-      "Je conçois des systèmes IA qui remplacent le travail humain répétitif — boîtes de réception, lignes téléphoniques, suivi de commandes, saisie de factures — et je les livre sous forme de workflows fiables et supervisés, pas de simples démos.",
-    educationTitle: "Parcours académique",
-    educationSubtitle: "Une formation solide au service d’une pratique concrète.",
-    education: [
-      {
-        date: "2025 – 2029",
-        title: "Licence en génie informatique",
-        institution: "University of Engineering & Technology (UET), Lahore",
-        details: "Spécialisation en systèmes, réseaux et IA appliquée, avec des projets d’automatisation menés en parallèle des études.",
-      },
-      {
-        date: "2023 – 2025",
-        title: "Diplôme intermédiaire en informatique (ICS)",
-        institution: "Superior College",
-        details: "Diplômé avec la mention A+ — premier de la classe en programmation et mathématiques.",
-      },
-    ],
-    metrics: [
-      { value: "10+", label: "PROJETS RÉALISÉS" },
-      { value: "24/7", label: "DISPONIBILITÉ" },
-      { value: "100%", label: "FIABILITÉ" },
-      { value: "5+", label: "STACKS D’AUTOMATISATION" },
-    ],
-    certificationsTitle: "Certifications clés",
-    certifications: [
-      "ACT AI — Programme national de formation à l’IA (Cycle 1)",
-      "Fondamentaux d’Excel et Copilot",
-      "Automatisation avec n8n : logique, données et gestion des erreurs",
-    ],
-    philosophyCommand: "philosophy --print",
-    philosophyQuote: "« Si une personne le fait deux fois par jour, cela devrait devenir un workflow avec journalisation, nouvelles tentatives et solution de secours. »",
-  },
 };
 
 const ar: Dict = {
@@ -245,42 +160,6 @@ const ar: Dict = {
   footerTitle: "واجد باش تخلي العمليات ديالك تمشي بوحدها؟",
   footerDesc: "نرسمو الخريطة ديال الوركفلوز ونطلقو أول أتمتة هاد الأسبوع.",
   rights: "uncive.ai © جميع الحقوق محفوظة",
-  about: {
-    badge: "شكون أنا",
-    headline: "طالب هندسة فالنهار، ومهندس ديال الأتمتة على مدار الساعة",
-    description:
-      "كنصمّم أنظمة بالذكاء الاصطناعي كتعوّض الخدمة البشرية المتكررة — الإيميلات، المكالمات، تتبّع الطلبات، وإدخال الفواتير — وكنسلّمها كوركفلوز موثوقة ومراقبة، ماشي غير عروض تجريبية.",
-    educationTitle: "المسار الدراسي",
-    educationSubtitle: "تكوين أكاديمي كيدعم الخبرة العملية.",
-    education: [
-      {
-        date: "2025 – 2029",
-        title: "إجازة فهندسة الحاسوب",
-        institution: "جامعة الهندسة والتكنولوجيا (UET)، لاهور",
-        details: "تركيز على الأنظمة، الشبكات، والذكاء الاصطناعي التطبيقي — مع بناء مشاريع الأتمتة بالتوازي مع الدراسة.",
-      },
-      {
-        date: "2023 – 2025",
-        title: "الدبلوم المتوسط فعلوم الحاسوب (ICS)",
-        institution: "Superior College",
-        details: "تخرّجت بميزة A+ — الأول فالقسم فالبرمجة والرياضيات.",
-      },
-    ],
-    metrics: [
-      { value: "+10", label: "مشاريع منجزة" },
-      { value: "24/7", label: "متاح" },
-      { value: "100%", label: "الموثوقية" },
-      { value: "+5", label: "منظومات أتمتة" },
-    ],
-    certificationsTitle: "أهم الشهادات",
-    certifications: [
-      "ACT AI — البرنامج الوطني للتكوين فالذكاء الاصطناعي (الدورة 1)",
-      "أساسيات Excel وCopilot",
-      "الأتمتة بـ n8n: المنطق، البيانات والتعامل مع الأخطاء",
-    ],
-    philosophyCommand: "philosophy --print",
-    philosophyQuote: "«إلا كان الإنسان كيدير نفس الخدمة جوج مرات فالنهار، خاصها تولّي وركفلو فيه التسجيل، إعادة المحاولة، وخطة بديلة.»",
-  },
 };
 
 const DICTS: Record<Lang, Dict> = { ar, en, fr };
