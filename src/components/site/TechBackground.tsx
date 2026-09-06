@@ -46,8 +46,10 @@ export function TechBackground() {
         for (let j = i + 1; j < nodes.length; j++) {
           const a = nodes[i]!;
           const b = nodes[j]!;
-
+          const d = Math.hypot(a.x - b.x, a.y - b.y);
+          if (d < 130) {
             ctx.strokeStyle = `rgba(56,189,248,${(1 - d / 130) * 0.16})`;
+
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
