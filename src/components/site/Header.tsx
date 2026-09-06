@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { CalendarDays, Menu } from "lucide-react";
 import { useState } from "react";
 import { LANGS, useI18n } from "@/lib/i18n";
@@ -8,7 +9,7 @@ export function Header() {
 
   const links = [
     { label: t.nav.home, href: "#home" },
-    { label: t.nav.about, href: "#about" },
+    { label: t.nav.about, href: "/about" },
     { label: t.nav.services, href: "#services" },
     { label: t.nav.projects, href: "#projects" },
     { label: t.nav.contact, href: "#contact" },
@@ -26,9 +27,15 @@ export function Header() {
 
         <nav className="hidden justify-center gap-7 text-sm text-muted-foreground lg:flex">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="transition-colors hover:text-primary">
-              {l.label}
-            </a>
+            l.href === "/about" ? (
+              <Link key={l.href} to="/about" className="transition-colors hover:text-primary">
+                {l.label}
+              </Link>
+            ) : (
+              <a key={l.href} href={l.href} className="transition-colors hover:text-primary">
+                {l.label}
+              </a>
+            )
           ))}
         </nav>
 
@@ -72,14 +79,25 @@ export function Header() {
       {open && (
         <nav className="flex flex-col gap-1 border-t border-white/10 px-5 py-3 text-sm lg:hidden">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-2 py-2 text-muted-foreground transition-colors hover:bg-white/5 hover:text-primary"
-            >
-              {l.label}
-            </a>
+            l.href === "/about" ? (
+              <Link
+                key={l.href}
+                to="/about"
+                onClick={() => setOpen(false)}
+                className="rounded-lg px-2 py-2 text-muted-foreground transition-colors hover:bg-white/5 hover:text-primary"
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="rounded-lg px-2 py-2 text-muted-foreground transition-colors hover:bg-white/5 hover:text-primary"
+              >
+                {l.label}
+              </a>
+            )
           ))}
         </nav>
       )}

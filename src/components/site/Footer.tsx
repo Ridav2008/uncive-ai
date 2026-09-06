@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { CalendarDays, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
@@ -5,7 +6,7 @@ export function Footer() {
   const { t } = useI18n();
   const links = [
     { label: t.nav.home, href: "#home" },
-    { label: t.nav.about, href: "#about" },
+    { label: t.nav.about, href: "/about" },
     { label: t.nav.services, href: "#services" },
     { label: t.nav.projects, href: "#projects" },
   ];
@@ -39,9 +40,15 @@ export function Footer() {
 
           <nav className="flex flex-wrap justify-center gap-5 text-sm text-muted-foreground">
             {links.map((l) => (
-              <a key={l.href} href={l.href} className="hover:text-primary">
-                {l.label}
-              </a>
+              l.href === "/about" ? (
+                <Link key={l.href} to="/about" className="hover:text-primary">
+                  {l.label}
+                </Link>
+              ) : (
+                <a key={l.href} href={l.href} className="hover:text-primary">
+                  {l.label}
+                </a>
+              )
             ))}
           </nav>
 
